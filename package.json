@@ -1,0 +1,24 @@
+{
+  "name": "ppx-test",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "schema": "yarn send-introspection-query http://swapi.apis.guru/"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "^2.2.0"
+  },
+  "dependencies": {
+    "bs-fetch": "^0.2.1",
+    "bs-json": "^1.0.1",
+    "graphql_ppx": "^0.2.1",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
