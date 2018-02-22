@@ -31,7 +31,7 @@ let sendQuery = (q) =>
         RequestInit.make(
         ~method_=Post,
         ~body=
-          Js.Dict.fromList([("query", Js.Json.strin(q##query)), ("variables", q##variables)])
+          Js.Dict.fromList([("query", Js.Json.string(q##query)), ("variables", q##variables)])
           |> Js.Json.object_
           |> Js.Json.stringify
           |> BodyInit.make,
@@ -58,5 +58,5 @@ let sendQuery = (q) =>
        )
   );
 
-sendQuery(query) |> Js.log(response) |> Js.Promise(resolve);
+sendQuery(query);
 Js.log("Hello, BuckleScript and Reason!");
